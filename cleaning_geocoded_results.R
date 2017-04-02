@@ -1,7 +1,7 @@
 for(i in 1:length(geocode_results)){
   dynamic_j<-length(geocode_results[[i]]$results[[1]]$address_components)
   for(j in 1:dynamic_j){
-    if(length(geocode_results[[i]]$results[[1]]$address_components[[j]]$types)>2){
+    if(length(geocode_results[[i]]$results[[1]]$address_components[[j]]$types)> 1){
       geocode_results[[i]]$results[[1]]$address_components[[j]]$types<-geocode_results[[i]]$results[[1]]$address_components[[j]]$types[(length(geocode_results[[i]]$results[[1]]$address_components[[j]]$types)-1):length(geocode_results[[i]]$results[[1]]$address_components[[j]]$types)]
     }
   }
